@@ -7,10 +7,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
-      title: 'Titolo bellissimo',
+    return MaterialApp(  
+      title: 'Tutorial App Microsis bellissimo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.yellow,
       ),
       home: const Home(),
       debugShowCheckedModeBanner: false,
