@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'Tutorial App Yes - modifcato da Microsis',
+      title: 'Titolo bellissimo',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
