@@ -13,7 +13,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: const Home(),
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: true,
     );
   }
 }
