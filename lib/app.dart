@@ -8,9 +8,9 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'Tutorial App Yes - modifcato da Microsis',
+      title: 'Tutorial App Microsis bellissimo',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.yellow,
       ),
       home: const Home(),
       debugShowCheckedModeBanner: false,
