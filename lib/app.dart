@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(  
-      title: 'Titolo brutto',
+      title: 'Titolo brutto forte',
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
