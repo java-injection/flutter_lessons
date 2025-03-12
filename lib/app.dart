@@ -8,12 +8,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'Tutorial App Yes',
+      title: 'Tutorial App Yes - modifcato da Microsis',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
       home: const Home(),
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
