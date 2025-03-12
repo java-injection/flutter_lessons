@@ -8,7 +8,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      title: 'Minimal Flutter App',
+      title: 'Tutorial App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
