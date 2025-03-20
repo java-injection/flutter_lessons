@@ -1,3 +1,5 @@
+import 'package:demo_1/dto/user.dart';
+import 'package:demo_1/pages/user_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -7,16 +9,33 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-class _HomeState extends State<Home> {
 
+
+class _HomeState extends State<Home> {
   String? title;
+  int counter = 0;
+
+  void _navigateToMainPage() {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) =>  UserProfilePage(
+          user: User(
+            id: 1,
+            name: 'Mario',
+            surname: 'Rossi',
+            age: 33,
+          ),
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.amber,
-        title: const Text('Home'),
+        title: Text('Home'),
       ),
       body: Container(
         color: Colors.grey.shade300,
@@ -37,13 +56,13 @@ class _HomeState extends State<Home> {
                           width: double.infinity,
                           color: Colors.red,
                           child: Text(
-                            title ?? 'Titolo al centro',
+                            'Contatore click: $counter',
                             style: TextStyle(fontSize: 24),
                           ),
                         ),
                         SizedBox(height: 20),
                         Container(
-                          color: Colors.blue,
+                          color: counter > 10 ? Colors.green : Colors.red,
                           child: Text(
                             title ?? 'Titolo al centro',
                             style: TextStyle(fontSize: 24),
@@ -54,16 +73,31 @@ class _HomeState extends State<Home> {
                           title ?? 'Titolo al centro',
                           style: TextStyle(fontSize: 24),
                         ),
-
                       ],
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
                         bottom: 20,
                       ),
-                      child: Text(
-                        title ?? 'Logout',
-                        style: TextStyle(fontSize: 24),
+                      child: ElevatedButton(
+                        onPressed: () {
+                          setState(_navigateToMainPage);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 20,
+                            horizontal: 70,
+                          ),
+                          backgroundColor: Color(0xFF003366),
+                          foregroundColor: Colors.white,
+                        ),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
                       ),
                     ),
                   ],
